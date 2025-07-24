@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background: #006400;
+    color: #fff;
+    padding: 1em 0.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+nav {
+    margin-top: 0.5em;
+}
+nav button {
+    margin: 0 0.5em;
+    background: #fff;
+    color: #006400;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+nav button:hover {
+    background: #c1e1c1;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 0.7em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+}
+
+button {
+    background: #006400;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #228B22;
+}
+
+.tabs {
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.tab-btn {
+    flex: 1;
+    background: #e8f5e9;
+    color: #006400;
+    border: 1px solid #006400;
+}
+
+.tab-btn.active {
+    background: #006400;
+    color: #fff;
+}
+
+.tab-content {
+    margin-top: 1em;
+}
+
+#soil-list, #distributor-list {
+    padding: 1em 0;
+}
+
+.card {
+    background: #e8f5e9;
+    border-radius: 7px;
+    margin-bottom: 1em;
+    padding: 0.7em 1em;
+    box-shadow: 0 1px 4px rgba(0,100,0,0.07);
+}
+
+.error-msg {
+    color: #b22222;
+    font-size: 0.9em;
+    margin-top: -0.5em;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+    color: #888;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1em;
+        border-radius: 0;
+    }
+    header {
+        padding: 0.5em 0;
+    }
+    .auth-form {
+        max-width: 100%;
+    }
+}

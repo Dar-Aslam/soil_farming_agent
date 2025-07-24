@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soil Farming Agent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Soil Farming Agent</h1>
+        <nav>
+            <button id="nav-login">Login</button>
+            <button id="nav-logout" style="display:none;">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Auth Forms -->
+        <section id="auth-section">
+            <div id="login-form" class="auth-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button id="login-btn">Login</button>
+                <p>
+                    New user? <button id="show-register">Register here</button>
+                </p>
+                <div id="login-error" class="error-msg"></div>
+            </div>
+            <div id="register-form" class="auth-form" style="display:none;">
+                <h2>Register</h2>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Password" required>
+                <button id="register-btn">Register</button>
+                <p>
+                    Already have an account? <button id="show-login">Login</button>
+                </p>
+                <div id="register-error" class="error-msg"></div>
+            </div>
+        </section>
+
+        <!-- Main App -->
+        <section id="app-section" style="display:none;">
+            <div id="user-info"></div>
+            <div class="tabs">
+                <button class="tab-btn" id="tab-soil">View Soil Details</button>
+                <button class="tab-btn" id="tab-distributor">View Distributor Details</button>
+                <button class="tab-btn" id="tab-post-soil">Post Soil Details</button>
+                <button class="tab-btn" id="tab-post-distributor">Post Distributor Details</button>
+            </div>
+            <div class="tab-content" id="soil-list"></div>
+            <div class="tab-content" id="distributor-list" style="display:none;"></div>
+            <div class="tab-content" id="post-soil-form" style="display:none;">
+                <h3>Post Soil Details</h3>
+                <input type="text" id="soil-type" placeholder="Soil Type" required>
+                <input type="text" id="soil-location" placeholder="Location" required>
+                <textarea id="soil-description" placeholder="Description"></textarea>
+                <button id="submit-soil">Submit</button>
+                <div id="post-soil-error" class="error-msg"></div>
+            </div>
+            <div class="tab-content" id="post-distributor-form" style="display:none;">
+                <h3>Post Distributor Details</h3>
+                <input type="text" id="distributor-name" placeholder="Distributor Name" required>
+                <input type="text" id="distributor-contact" placeholder="Contact" required>
+                <textarea id="distributor-details" placeholder="Details"></textarea>
+                <button id="submit-distributor">Submit</button>
+                <div id="post-distributor-error" class="error-msg"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Soil Farming Agent
+    </footer>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
